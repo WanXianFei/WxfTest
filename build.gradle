@@ -4,6 +4,18 @@ buildscript {
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
     }
 }
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://www.jitpack.io'
+            credentials {
+                username authToken
+            }
+        }
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.2.1' apply false
     id 'com.android.library' version '7.2.1' apply false
